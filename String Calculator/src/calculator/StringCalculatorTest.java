@@ -16,18 +16,23 @@ class StringCalculatorTest {
 	@Test
 	 @DisplayName("String With Single Number Should Return Number As Int")
 	    void stringWithSingleNumberShouldReturnNumberAsInt() {
-		assertEquals(1, stringCalculator.add("1"));
+		    assertEquals(1, stringCalculator.add("1"));
 	    }
 	
 	@Test
 	 @DisplayName("String Should Handle Multiple Input")
 	    void stringShouldhandleMultipleInput() {
-		assertEquals(45, stringCalculator.add("1,2,3,4,5,6,7,8,9"));
+		    assertEquals(45, stringCalculator.add("1,2,3,4,5,6,7,8,9"));
 	    }
 	
 	@Test
 	 @DisplayName("String Should Handle New Lines Between Numbers")
-	 void stringShouldHandleNewLinesBetweenNumbersu(){
-		assertEquals(6,stringCalculator.add("1\n2,3"));
+	   void stringShouldHandleNewLinesBetweenNumbersu(){
+		   assertEquals(6,stringCalculator.add("1\n2,3"));
+	}
+	@Test
+	 @DisplayName("String Should Support Different Delimiters")
+	   void  tringShouldSupportDifferentDelimiters() {
+		   assertEquals(3,stringCalculator.add("//;\\n1;2"));
 	}
 }
