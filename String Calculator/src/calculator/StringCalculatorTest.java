@@ -2,13 +2,15 @@ package calculator;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 class StringCalculatorTest {
-
+	StringCalculator stringCalculator = new StringCalculator();
+	
 	@Test
-	void testAdd() {
-		fail("Not yet implemented");
-	}
-
+	 @DisplayName("Empty String Should Return 0")
+	    void emptyStringShouldReturn0() {
+	        assertEquals(0, stringCalculator.add(""));
+	    }
+	
 }
