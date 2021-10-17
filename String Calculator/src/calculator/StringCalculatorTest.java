@@ -14,14 +14,20 @@ class StringCalculatorTest {
 	    }
 	
 	@Test
-	 @DisplayName("string With Single Number Should Return Number As Int")
+	 @DisplayName("String With Single Number Should Return Number As Int")
 	    void stringWithSingleNumberShouldReturnNumberAsInt() {
 		assertEquals(1, stringCalculator.add("1"));
 	    }
 	
 	@Test
-	 @DisplayName("string Should Handle Multiple Input")
+	 @DisplayName("String Should Handle Multiple Input")
 	    void stringShouldhandleMultipleInput() {
 		assertEquals(45, stringCalculator.add("1,2,3,4,5,6,7,8,9"));
 	    }
+	
+	@Test
+	 @DisplayName("String Should Handle New Lines Between Numbers")
+	 void stringShouldHandleNewLinesBetweenNumbersu(){
+		assertEquals(6,stringCalculator.add("1\n2,3"));
+	}
 }
