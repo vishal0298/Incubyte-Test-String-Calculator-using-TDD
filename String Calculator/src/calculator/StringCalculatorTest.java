@@ -13,4 +13,9 @@ class StringCalculatorTest {
 	        assertEquals(0, stringCalculator.add(""));
 	    }
 	
+	@Test
+	 @DisplayName("string With Single Number Should Return Number As Int")
+	    void stringWithSingleNumberShouldReturnNumberAsInt() {
+		assertEquals(1, stringCalculator.add("1"));
+	    }
 }
